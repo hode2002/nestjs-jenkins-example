@@ -19,7 +19,11 @@ pipeline {
 
     stage('📦 Install Dependencies') {
       steps {
-        sh 'pnpm install'
+        sh '''
+          corepack enable
+          corepack prepare pnpm@latest --activate
+          pnpm install
+        '''
       }
     }
 
