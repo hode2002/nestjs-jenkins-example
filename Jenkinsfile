@@ -6,7 +6,7 @@ pipeline {
   }
 
   environment {
-    IMAGE_NAME = 'hode0706022/nestjs-jenkins-example'
+    IMAGE_NAME = 'hode070602/nestjs-jenkins-example'
     IMAGE_TAG = 'latest'
   }
 
