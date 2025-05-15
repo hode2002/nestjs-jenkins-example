@@ -46,7 +46,7 @@ pipeline {
         withCredentials([string(credentialsId: 'ec2-ip', variable: 'EC2_IP')]) {
             sh '''
                 ssh -i $SSH_KEY -o StrictHostKeyChecking=no ec2-user@$EC2_IP '
-                cd /var/www/nestjs-jenkins-example &&
+                cd /home/ec2-user/app &&
                 git pull origin main &&
                 docker compose pull &&
                 docker compose up -d --build
