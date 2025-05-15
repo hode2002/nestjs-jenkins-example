@@ -13,7 +13,7 @@ pipeline {
   stages {
     stage('📥 Clone Source Code') {
       steps {
-        git 'https://github.com/hode2002/nestjs-jenkins-example.git'
+        git branch: 'main', url: 'https://github.com/hode2002/nestjs-jenkins-example.git'
       }
     }
 
